@@ -7,16 +7,18 @@
             Console.WriteLine("-------- Welcome To Generics Problem ---------");
 
 
-            int[] intArray = { 1, 2, 3, 4, 5 };
-            double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
-            char[] charArray = { 'H', 'S', 'E', 'L', 'L', 'O' };
+            int intArray = MaxNumberCheck.MaxIntegerNumber(23, 42, 12);
+            Console.WriteLine("\nMax integer number is: " + intArray);
 
-            new PrintArray<int>(intArray).toPrint();
-            new PrintArray<double>(doubleArray).toPrint();
-            new PrintArray<char>(charArray).toPrint();
+            double output = MaxNumberCheck.MaxIntegerNumber(33.2, 23.4, 12.5);
+            Console.WriteLine("\nMax floating number is: " + output);
+
+            string strArr = MaxNumberCheck.MaxIntegerNumber("Rajesh", "ViratKholi", "MSDhoni");
+            Console.WriteLine("\nMax string is: " + strArr);
+
 
 
 
         }
-}
+    }
 }
