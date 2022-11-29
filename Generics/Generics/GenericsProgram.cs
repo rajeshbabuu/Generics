@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class MaxNumberCheck
+    public class PrintArray<T>
     {
-        public static int MaxIntegerNumber(int val1, int val2, int val3)
-        {
-            if (val1.CompareTo(val2) > 0 && val1.CompareTo(val3) > 0 || val1.CompareTo(val2) >= 0 && val1.CompareTo(val3) > 0 || val1.CompareTo(val2) > 0 && val1.CompareTo(val3) >= 0)
-            {
-                return val1;
-            }
-            if (val2.CompareTo(val1) > 0 && val2.CompareTo(val3) > 0 || val2.CompareTo(val1) >= 0 && val2.CompareTo(val3) > 0 || val2.CompareTo(val1) > 0 && val2.CompareTo(val3) >= 0)
-            {
-                return val2;
-            }
+        //public static void toPrint<T>(T[] inputArray)
+        public T[] inputArray;
 
-            if (val3.CompareTo(val1) > 0 && val3.CompareTo(val1) > 0 || val3.CompareTo(val1) >= 0 && val3.CompareTo(val1) > 0 || val3.CompareTo(val1) > 0 && val3.CompareTo(val1) >= 0)
+        public PrintArray(T[] inputArray)
+        {
+            this.inputArray = inputArray;
+        }
+
+        public void toPrint()
+        {
+
+            foreach (var element in inputArray)
             {
-                return val3;
+                System.Console.WriteLine(element);
             }
-            return val1;
+            Console.WriteLine("------------------------  ");
         }
     }
 }
